@@ -25,6 +25,10 @@
 		DE34DFE518F889FE00984015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34DFBB18F889FD00984015 /* Foundation.framework */; };
 		DE34DFED18F889FE00984015 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE34DFEB18F889FE00984015 /* InfoPlist.strings */; };
 		DE34DFF018F889FE00984015 /* WheresCarlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34DFEF18F889FE00984015 /* WheresCarlTests.m */; };
+		DE34DFFC18F890E100984015 /* JCMCheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34DFFA18F890E100984015 /* JCMCheckInViewController.m */; };
+		DE34DFFD18F890E100984015 /* JCMCheckInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34DFFB18F890E100984015 /* JCMCheckInViewController.xib */; };
+		DE34E00618F891E900984015 /* JCMCheckInListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E00418F891E900984015 /* JCMCheckInListTableViewController.m */; };
+		DE34E00718F891E900984015 /* JCMCheckInListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E00518F891E900984015 /* JCMCheckInListTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,27 +46,33 @@
 		DE34DFB918F889FD00984015 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE34DFBB18F889FD00984015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE34DFBD18F889FD00984015 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DE34DFC118F889FD00984015 /* WheresCarl-Info.plist */ = {isa = PBXFileReference; path = "WheresCarl-Info.plist"; sourceTree = "<group>"; };
+		DE34DFC118F889FD00984015 /* WheresCarl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WheresCarl-Info.plist"; sourceTree = "<group>"; };
 		DE34DFC318F889FD00984015 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE34DFC518F889FE00984015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DE34DFC718F889FE00984015 /* WheresCarl-Prefix.pch */ = {isa = PBXFileReference; path = "WheresCarl-Prefix.pch"; sourceTree = "<group>"; };
-		DE34DFC818F889FE00984015 /* JCMAppDelegate.h */ = {isa = PBXFileReference; path = JCMAppDelegate.h; sourceTree = "<group>"; };
+		DE34DFC718F889FE00984015 /* WheresCarl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WheresCarl-Prefix.pch"; sourceTree = "<group>"; };
+		DE34DFC818F889FE00984015 /* JCMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCMAppDelegate.h; sourceTree = "<group>"; };
 		DE34DFC918F889FE00984015 /* JCMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCMAppDelegate.m; sourceTree = "<group>"; };
 		DE34DFCC18F889FE00984015 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		DE34DFCE18F889FE00984015 /* JCMFirstViewController.h */ = {isa = PBXFileReference; path = JCMFirstViewController.h; sourceTree = "<group>"; };
+		DE34DFCE18F889FE00984015 /* JCMFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCMFirstViewController.h; sourceTree = "<group>"; };
 		DE34DFCF18F889FE00984015 /* JCMFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCMFirstViewController.m; sourceTree = "<group>"; };
 		DE34DFD118F889FE00984015 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		DE34DFD318F889FE00984015 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		DE34DFD518F889FE00984015 /* JCMSecondViewController.h */ = {isa = PBXFileReference; path = JCMSecondViewController.h; sourceTree = "<group>"; };
+		DE34DFD518F889FE00984015 /* JCMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCMSecondViewController.h; sourceTree = "<group>"; };
 		DE34DFD618F889FE00984015 /* JCMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCMSecondViewController.m; sourceTree = "<group>"; };
 		DE34DFD818F889FE00984015 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		DE34DFDA18F889FE00984015 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		DE34DFE118F889FE00984015 /* WheresCarlTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheresCarlTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE34DFE218F889FE00984015 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		DE34DFEA18F889FE00984015 /* WheresCarlTests-Info.plist */ = {isa = PBXFileReference; path = "WheresCarlTests-Info.plist"; sourceTree = "<group>"; };
+		DE34DFEA18F889FE00984015 /* WheresCarlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WheresCarlTests-Info.plist"; sourceTree = "<group>"; };
 		DE34DFEC18F889FE00984015 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DE34DFEE18F889FE00984015 /* WheresCarlTests.h */ = {isa = PBXFileReference; path = WheresCarlTests.h; sourceTree = "<group>"; };
+		DE34DFEE18F889FE00984015 /* WheresCarlTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WheresCarlTests.h; sourceTree = "<group>"; };
 		DE34DFEF18F889FE00984015 /* WheresCarlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WheresCarlTests.m; sourceTree = "<group>"; };
+		DE34DFF918F890E100984015 /* JCMCheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMCheckInViewController.h; sourceTree = "<group>"; };
+		DE34DFFA18F890E100984015 /* JCMCheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMCheckInViewController.m; sourceTree = "<group>"; };
+		DE34DFFB18F890E100984015 /* JCMCheckInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCMCheckInViewController.xib; sourceTree = "<group>"; };
+		DE34E00318F891E800984015 /* JCMCheckInListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMCheckInListTableViewController.h; sourceTree = "<group>"; };
+		DE34E00418F891E900984015 /* JCMCheckInListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMCheckInListTableViewController.m; sourceTree = "<group>"; };
+		DE34E00518F891E900984015 /* JCMCheckInListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCMCheckInListTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +132,12 @@
 		DE34DFBF18F889FD00984015 /* WheresCarl */ = {
 			isa = PBXGroup;
 			children = (
+				DE34E00318F891E800984015 /* JCMCheckInListTableViewController.h */,
+				DE34E00418F891E900984015 /* JCMCheckInListTableViewController.m */,
+				DE34E00518F891E900984015 /* JCMCheckInListTableViewController.xib */,
+				DE34DFF918F890E100984015 /* JCMCheckInViewController.h */,
+				DE34DFFA18F890E100984015 /* JCMCheckInViewController.m */,
+				DE34DFFB18F890E100984015 /* JCMCheckInViewController.xib */,
 				DE34DFC818F889FE00984015 /* JCMAppDelegate.h */,
 				DE34DFC918F889FE00984015 /* JCMAppDelegate.m */,
 				DE34DFCB18F889FE00984015 /* MainStoryboard.storyboard */,
@@ -245,6 +261,8 @@
 				DE34DFD418F889FE00984015 /* first@2x.png in Resources */,
 				DE34DFD918F889FE00984015 /* second.png in Resources */,
 				DE34DFDB18F889FE00984015 /* second@2x.png in Resources */,
+				DE34DFFD18F890E100984015 /* JCMCheckInViewController.xib in Resources */,
+				DE34E00718F891E900984015 /* JCMCheckInListTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +301,8 @@
 				DE34DFCA18F889FE00984015 /* JCMAppDelegate.m in Sources */,
 				DE34DFD018F889FE00984015 /* JCMFirstViewController.m in Sources */,
 				DE34DFD718F889FE00984015 /* JCMSecondViewController.m in Sources */,
+				DE34DFFC18F890E100984015 /* JCMCheckInViewController.m in Sources */,
+				DE34E00618F891E900984015 /* JCMCheckInListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
