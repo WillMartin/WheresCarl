@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
+#import "JCMCheckIn.h"
 
 @interface JCMCheckInViewController : UIViewController
+
+@property JCMCheckIn *currentCheckIn;
 
 @end

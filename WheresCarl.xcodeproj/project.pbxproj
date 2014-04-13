@@ -14,10 +14,8 @@
 		DE34DFC618F889FE00984015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34DFC518F889FE00984015 /* main.m */; };
 		DE34DFCA18F889FE00984015 /* JCMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34DFC918F889FE00984015 /* JCMAppDelegate.m */; };
 		DE34DFCD18F889FE00984015 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE34DFCB18F889FE00984015 /* MainStoryboard.storyboard */; };
-		DE34DFD018F889FE00984015 /* JCMFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34DFCF18F889FE00984015 /* JCMFirstViewController.m */; };
 		DE34DFD218F889FE00984015 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = DE34DFD118F889FE00984015 /* first.png */; };
 		DE34DFD418F889FE00984015 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE34DFD318F889FE00984015 /* first@2x.png */; };
-		DE34DFD718F889FE00984015 /* JCMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34DFD618F889FE00984015 /* JCMSecondViewController.m */; };
 		DE34DFD918F889FE00984015 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = DE34DFD818F889FE00984015 /* second.png */; };
 		DE34DFDB18F889FE00984015 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE34DFDA18F889FE00984015 /* second@2x.png */; };
 		DE34DFE318F889FE00984015 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34DFE218F889FE00984015 /* SenTestingKit.framework */; };
@@ -29,6 +27,10 @@
 		DE34DFFD18F890E100984015 /* JCMCheckInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34DFFB18F890E100984015 /* JCMCheckInViewController.xib */; };
 		DE34E00618F891E900984015 /* JCMCheckInListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E00418F891E900984015 /* JCMCheckInListTableViewController.m */; };
 		DE34E00718F891E900984015 /* JCMCheckInListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE34E00518F891E900984015 /* JCMCheckInListTableViewController.xib */; };
+		FCF96EEE18FAFFE80079D943 /* JCMCheckIn.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF96EED18FAFFE80079D943 /* JCMCheckIn.m */; };
+		FCF96EF018FB00E40079D943 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF96EEF18FB00E40079D943 /* MapKit.framework */; };
+		FCF96EF318FB18270079D943 /* JCMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF96EF218FB18270079D943 /* JCMTabBarViewController.m */; };
+		FCF96EF918FB1B260079D943 /* JCMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF96EF818FB1B260079D943 /* JCMMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +55,8 @@
 		DE34DFC818F889FE00984015 /* JCMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCMAppDelegate.h; sourceTree = "<group>"; };
 		DE34DFC918F889FE00984015 /* JCMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCMAppDelegate.m; sourceTree = "<group>"; };
 		DE34DFCC18F889FE00984015 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		DE34DFCE18F889FE00984015 /* JCMFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCMFirstViewController.h; sourceTree = "<group>"; };
-		DE34DFCF18F889FE00984015 /* JCMFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCMFirstViewController.m; sourceTree = "<group>"; };
 		DE34DFD118F889FE00984015 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		DE34DFD318F889FE00984015 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		DE34DFD518F889FE00984015 /* JCMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCMSecondViewController.h; sourceTree = "<group>"; };
-		DE34DFD618F889FE00984015 /* JCMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCMSecondViewController.m; sourceTree = "<group>"; };
 		DE34DFD818F889FE00984015 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		DE34DFDA18F889FE00984015 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		DE34DFE118F889FE00984015 /* WheresCarlTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheresCarlTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +71,13 @@
 		DE34E00318F891E800984015 /* JCMCheckInListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMCheckInListTableViewController.h; sourceTree = "<group>"; };
 		DE34E00418F891E900984015 /* JCMCheckInListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMCheckInListTableViewController.m; sourceTree = "<group>"; };
 		DE34E00518F891E900984015 /* JCMCheckInListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCMCheckInListTableViewController.xib; sourceTree = "<group>"; };
+		FCF96EEC18FAFFE80079D943 /* JCMCheckIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMCheckIn.h; sourceTree = "<group>"; };
+		FCF96EED18FAFFE80079D943 /* JCMCheckIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMCheckIn.m; sourceTree = "<group>"; };
+		FCF96EEF18FB00E40079D943 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FCF96EF118FB18270079D943 /* JCMTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMTabBarViewController.h; sourceTree = "<group>"; };
+		FCF96EF218FB18270079D943 /* JCMTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMTabBarViewController.m; sourceTree = "<group>"; };
+		FCF96EF718FB1B260079D943 /* JCMMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMMapViewController.h; sourceTree = "<group>"; };
+		FCF96EF818FB1B260079D943 /* JCMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 			files = (
 				DE34DFBA18F889FD00984015 /* UIKit.framework in Frameworks */,
 				DE34DFBC18F889FD00984015 /* Foundation.framework in Frameworks */,
+				FCF96EF018FB00E40079D943 /* MapKit.framework in Frameworks */,
 				DE34DFBE18F889FD00984015 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +127,7 @@
 		DE34DFB818F889FD00984015 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCF96EEF18FB00E40079D943 /* MapKit.framework */,
 				DE34DFB918F889FD00984015 /* UIKit.framework */,
 				DE34DFBB18F889FD00984015 /* Foundation.framework */,
 				DE34DFBD18F889FD00984015 /* CoreGraphics.framework */,
@@ -132,21 +139,23 @@
 		DE34DFBF18F889FD00984015 /* WheresCarl */ = {
 			isa = PBXGroup;
 			children = (
+				FCF96EF718FB1B260079D943 /* JCMMapViewController.h */,
+				FCF96EF818FB1B260079D943 /* JCMMapViewController.m */,
 				DE34E00318F891E800984015 /* JCMCheckInListTableViewController.h */,
 				DE34E00418F891E900984015 /* JCMCheckInListTableViewController.m */,
 				DE34E00518F891E900984015 /* JCMCheckInListTableViewController.xib */,
+				FCF96EEC18FAFFE80079D943 /* JCMCheckIn.h */,
+				FCF96EED18FAFFE80079D943 /* JCMCheckIn.m */,
 				DE34DFF918F890E100984015 /* JCMCheckInViewController.h */,
 				DE34DFFA18F890E100984015 /* JCMCheckInViewController.m */,
 				DE34DFFB18F890E100984015 /* JCMCheckInViewController.xib */,
 				DE34DFC818F889FE00984015 /* JCMAppDelegate.h */,
 				DE34DFC918F889FE00984015 /* JCMAppDelegate.m */,
 				DE34DFCB18F889FE00984015 /* MainStoryboard.storyboard */,
-				DE34DFCE18F889FE00984015 /* JCMFirstViewController.h */,
-				DE34DFCF18F889FE00984015 /* JCMFirstViewController.m */,
+				FCF96EF118FB18270079D943 /* JCMTabBarViewController.h */,
+				FCF96EF218FB18270079D943 /* JCMTabBarViewController.m */,
 				DE34DFD118F889FE00984015 /* first.png */,
 				DE34DFD318F889FE00984015 /* first@2x.png */,
-				DE34DFD518F889FE00984015 /* JCMSecondViewController.h */,
-				DE34DFD618F889FE00984015 /* JCMSecondViewController.m */,
 				DE34DFD818F889FE00984015 /* second.png */,
 				DE34DFDA18F889FE00984015 /* second@2x.png */,
 				DE34DFC018F889FD00984015 /* Supporting Files */,
@@ -231,6 +240,15 @@
 			attributes = {
 				CLASSPREFIX = JCM;
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					DE34DFB418F889FD00984015 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = DE34DFAF18F889FD00984015 /* Build configuration list for PBXProject "WheresCarl" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -298,9 +316,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE34DFC618F889FE00984015 /* main.m in Sources */,
+				FCF96EF918FB1B260079D943 /* JCMMapViewController.m in Sources */,
+				FCF96EF318FB18270079D943 /* JCMTabBarViewController.m in Sources */,
+				FCF96EEE18FAFFE80079D943 /* JCMCheckIn.m in Sources */,
 				DE34DFCA18F889FE00984015 /* JCMAppDelegate.m in Sources */,
-				DE34DFD018F889FE00984015 /* JCMFirstViewController.m in Sources */,
-				DE34DFD718F889FE00984015 /* JCMSecondViewController.m in Sources */,
 				DE34DFFC18F890E100984015 /* JCMCheckInViewController.m in Sources */,
 				DE34E00618F891E900984015 /* JCMCheckInListTableViewController.m in Sources */,
 			);
@@ -372,7 +391,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -390,7 +409,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -403,6 +422,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WheresCarl/WheresCarl-Prefix.pch";
 				INFOPLIST_FILE = "WheresCarl/WheresCarl-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -414,6 +434,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WheresCarl/WheresCarl-Prefix.pch";
 				INFOPLIST_FILE = "WheresCarl/WheresCarl-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -472,6 +493,7 @@
 				DE34DFF518F889FE00984015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE34DFF618F889FE00984015 /* Build configuration list for PBXNativeTarget "WheresCarlTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +502,7 @@
 				DE34DFF818F889FE00984015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,6 +14,11 @@
 
 @implementation JCMCheckInListTableViewController
 
+- (NSMutableArray*)getCheckInList
+{
+    return ((JCMTabBarViewController*) self.parentViewController.parentViewController).checkIns;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -25,7 +30,14 @@
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue 
 {
-    
+    NSLog(@"Unwinding to list...");
+    JCMCheckInViewController *sendingView = [segue sourceViewController];
+    if(sendingView.currentCheckIn != nil)
+    {
+        NSLog(@"Current checkin is not nil --> adding one!");
+        [[self getCheckInList] addObject:sendingView.currentCheckIn];
+        [self.tableView reloadData];
+    }
 }
 
 
@@ -56,24 +68,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    NSLog(@"In tableView:numberOfRowsInSection");
+    return [[self getCheckInList] count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    NSLog(@"In table view for row num: @%i VIEW!!", indexPath.row);
+    static NSString *CellIdentifier = @"CheckInListCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    JCMCheckIn *checkInItem = [[self getCheckInList] objectAtIndex:indexPath.row];
+    cell.textLabel.text = checkInItem.name;
     
     return cell;
 }
