@@ -31,7 +31,6 @@
 // Called when user has clicked Done button and we need to determine location
 - (void)updateLocation
 {
-    NSLog(@"UPDATING LOCATION?");
     // Create a location manager if one doesn't already exist
     if(nil == self.locationManager)
         self.locationManager = [[CLLocationManager alloc] init];
@@ -44,10 +43,12 @@
     if([CLLocationManager locationServicesEnabled])
     {
         [self.locationManager startUpdatingLocation];
+        NSLog(@"Called startUpdatingLocation");
     }
 }
 
 #pragma mark - CLLocationManagerDelegate
+
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
@@ -58,11 +59,11 @@
     
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    NSLog(@"didUpdateToLocation: %@", newLocation);
-    self.currentLocation = newLocation;
-    NSLog(@"didUpdateToLocation: %@", self.currentLocation);
+    self.currentLocation = [locations lastObject];
+    NSLog(@"Updated Location to: %@", self.currentLocation);
+    NSLog(@"----------");
     
     // After grabbing location, turn off updates. We'll turn them back on when needed
     [self.locationManager stopUpdatingLocation];
@@ -75,7 +76,7 @@
     // If nameField or messageField is blank, don't create a checkin
     if (self.nameField.text.length < 1 || self.messageField.text.length < 1) return;
     
-    _currentCheckIn = [[JCMCheckIn alloc] init];
+    self.currentCheckIn = [[JCMCheckIn alloc] init];
     self.currentCheckIn.name = self.nameField.text;
     self.currentCheckIn.message = self.messageField.text;
     self.currentCheckIn.time = [NSDate date];
@@ -99,6 +100,12 @@
     // other input, location will already be ready!
     [self updateLocation];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self updateLocation];
 }
 
 - (void)didReceiveMemoryWarning

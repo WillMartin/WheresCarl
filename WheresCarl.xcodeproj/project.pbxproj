@@ -67,6 +67,7 @@
 		4F7C71E818FB54F9004AA210 /* JCMCheckIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMCheckIn.m; sourceTree = "<group>"; };
 		4F7C71EA18FB56A6004AA210 /* JCMCheckInListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMCheckInListTableViewController.h; sourceTree = "<group>"; };
 		4F7C71EB18FB56A6004AA210 /* JCMCheckInListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMCheckInListTableViewController.m; sourceTree = "<group>"; };
+		FC92F21418FDDDCB00EF79CC /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +142,7 @@
 				4F7C71E218FB53B3004AA210 /* JCMTabBarViewController.m */,
 				4F7C71DE18FB5327004AA210 /* JCMMapViewController.h */,
 				4F7C71DF18FB5327004AA210 /* JCMMapViewController.m */,
+				FC92F21418FDDDCB00EF79CC /* constants.h */,
 				4F7C71BF18FB5076004AA210 /* Images.xcassets */,
 				4F7C71AE18FB5076004AA210 /* Supporting Files */,
 			);
@@ -491,6 +493,7 @@
 				4F7C71D818FB5077004AA210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F7C71D918FB5077004AA210 /* Build configuration list for PBXNativeTarget "WheresCarlTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +502,7 @@
 				4F7C71DB18FB5077004AA210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

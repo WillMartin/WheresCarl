@@ -10,7 +10,10 @@
 #import "MapKit/MapKit.h"
 #import "JCMTabBarViewController.h"
 #import "JCMCheckInViewController.h"
+#import "constants.h"
 
 @interface JCMMapViewController : UIViewController <MKMapViewDelegate>
+
 - (IBAction)unwindToViewAllCheckins:(UIStoryboardSegue *)segue;
+
 @end
