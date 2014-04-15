@@ -32,6 +32,12 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -58,6 +64,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] init];
+    
+    return view;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -81,8 +94,23 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     JCMCheckIn *checkInItem = [[self getCheckInList] objectAtIndex:indexPath.row];
-    cell.textLabel.text = checkInItem.name;
     
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
+    nameLabel.text = [NSString stringWithFormat:checkInItem.name];
+    
+    UILabel *messageLabel = (UILabel *)[cell viewWithTag:2];
+    messageLabel.numberOfLines = 0;
+    messageLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    //messageLabel.lineBreakMode = UILineBreakModeWordWrap;
+    messageLabel.text = [NSString stringWithFormat:checkInItem.message];
+    
+    
+    
+
+    
+    UILabel *coordLabel = (UILabel *)[cell viewWithTag:3];
+    coordLabel.text = [NSString stringWithFormat: @"%f, %f", checkInItem.location.latitude, checkInItem.location.longitude];
+        
     return cell;
 }
 
