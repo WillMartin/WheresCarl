@@ -23,10 +23,16 @@
     return self;
 }
 
+- (void)loadSavedCheckIns
+{
+    // TODO connect this to DB to load user's past checkins
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.checkIns = [[NSMutableArray alloc] init];
+    [self loadSavedCheckIns];
     // Do any additional setup after loading the view.
 }
 

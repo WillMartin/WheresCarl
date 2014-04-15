@@ -27,6 +27,7 @@
     {
         NSLog(@"Current checkin is not nil --> adding one!");
         [[self getCheckInList] addObject:sendingView.currentCheckIn];
+        NSLog([sendingView.currentCheckIn description]);
         [self.tableView reloadData];
     }
 }
@@ -72,7 +73,8 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"In table view for row num: @%i VIEW!!", indexPath.row);
     static NSString *CellIdentifier = @"CheckInListCell";

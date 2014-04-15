@@ -10,4 +10,10 @@
 
 @implementation JCMCheckIn
 
+-(NSString *)description
+{
+    return [NSString stringWithFormat: @"Name: %@; Message: %@; Lat: %f; Long: %f; Time: ",
+            self.name, self.message, self.location.latitude, self.location.longitude];
+}
+
 @end

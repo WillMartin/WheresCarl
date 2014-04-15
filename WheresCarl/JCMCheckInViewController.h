@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "JCMCheckIn.h"
 
-@interface JCMCheckInViewController : UIViewController
+// Implements Location Manager (a protocol) which defines methods for receiving/reacting
+// to CLLocationManager object
+@interface JCMCheckInViewController : UIViewController <CLLocationManagerDelegate>
+
 @property JCMCheckIn *currentCheckIn;
+
 @end

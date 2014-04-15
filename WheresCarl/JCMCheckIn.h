@@ -16,4 +16,6 @@
 @property NSDate *time;
 @property CLLocationCoordinate2D location;
 
+-(NSString *)description;
+
 @end
