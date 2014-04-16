@@ -31,19 +31,14 @@
     // Loop over the CheckIn objects and display them! Grab them from JCMTabBarViewController
     NSMutableArray *checkIns = [self getCheckInList];
     
-    NSLog(@"About to loop over checkins");
-    
     for (JCMCheckIn *ch in checkIns)
     {
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
         annotation.coordinate = ch.location;
-        annotation.title = ch.message;
-        annotation.subtitle = ch.name;
+        annotation.title = ch.name;
+        annotation.subtitle = ch.message;
         [self.mapView addAnnotation:annotation];
-        NSLog(@"added an annotation %@", ch.name);
-        NSLog([ch description]);
     }
-    NSLog(@"--------------------");
 }
 
 - (IBAction)unwindToViewAllCheckins:(UIStoryboardSegue *)segue
@@ -65,20 +60,19 @@
     return self;
 }
 
+// Called once when the view is initialized
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     if(nil == self.mapView)
     {
         self.mapView = [[MKMapView alloc] init];
-    
-        // mapView's delegate is this class itself!
         self.mapView.delegate = self;
     }
     
-    // Set center to Carleton
+    // Center map on Carleton
     CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake(JCMCarletonLat, JCMCarletonLong);
-    MKCoordinateSpan centerSpan = MKCoordinateSpanMake(.3, .3);
+    MKCoordinateSpan centerSpan = MKCoordinateSpanMake(JCMCarletonLatSpan, JCMCarletonLongSpan);
     MKCoordinateRegion centerRegion = MKCoordinateRegionMake(centerCoordinate, centerSpan);
     
     [self.mapView setRegion:centerRegion];

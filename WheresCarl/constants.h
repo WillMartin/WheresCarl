@@ -11,5 +11,7 @@
 
 #define JCMCarletonLat 44.460744
 #define JCMCarletonLong -93.155423
+#define JCMCarletonLatSpan .2
+#define JCMCarletonLongSpan .2
 
 #endif

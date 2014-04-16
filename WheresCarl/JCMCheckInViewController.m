@@ -35,10 +35,6 @@
     if(nil == self.locationManager)
         self.locationManager = [[CLLocationManager alloc] init];
     
-    // locationManager should send updates to this controller class
-    self.locationManager.delegate = self;
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
     // Send updates if user wants them
     if([CLLocationManager locationServicesEnabled])
     {
@@ -62,12 +58,15 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     self.currentLocation = [locations lastObject];
+    NSLog(@"----------");
+    NSLog(@"Last Location: %@", [locations lastObject]);
+    NSLog(@"First Location: %@", locations[0]);
     NSLog(@"Updated Location to: %@", self.currentLocation);
     NSLog(@"----------");
     
     // After grabbing location, turn off updates. We'll turn them back on when needed
-    [self.locationManager stopUpdatingLocation];
-    self.locationManager.delegate = nil;
+    // TODO figure out why we can't simply turn locations on and off at will...
+    //  [self.locationManager stopUpdatingLocation];
 }
 
 // Parse out user's input and set currentCheckIn to be a CheckIn object using said input
@@ -96,15 +95,18 @@
 {
     [super viewDidLoad];
     self.locationManager = [[CLLocationManager alloc] init];
-    // Is this async? Start the request for location while user enters other data, so that once user has given
-    // other input, location will already be ready!
-    [self updateLocation];
-    // Do any additional setup after loading the view.
+    
+    // locationManager should send updates to this controller class
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    // Is this async? Start the request for location while user enters other data, so that once user has given
+    // other input, location will already be ready!
     [self updateLocation];
 }
 
