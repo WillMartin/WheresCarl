@@ -7,12 +7,16 @@
 //
 
 #import "JCMAppDelegate.h"
+#import "JCMTabBarViewController.h"
 
 @implementation JCMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSMutableArray *checkInsToSave = ((JCMTabBarViewController *) self.window.rootViewController).checkIns;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:checkInsToSave];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"checkIns"];
     return YES;
 }
 							
@@ -26,11 +30,20 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    NSMutableArray *checkInsToSave = ((JCMTabBarViewController *) self.window.rootViewController).checkIns;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:checkInsToSave];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"checkIns"];
+    NSLog(@"SAVED");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"checkIns"];
+    NSMutableArray *loadedCheckIns = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    ((JCMTabBarViewController *) self.window.rootViewController).checkIns = loadedCheckIns;
+    NSLog(@"Loaded. Length %d", [loadedCheckIns count]);
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -41,6 +54,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    //int x =[((JCMTabBarViewController *) self.window.rootViewController).checkIns count];
+    //NSLog(@"TEST: %d", x);
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"checkIns"];
+    NSMutableArray *loadedCheckIns = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    ((JCMTabBarViewController *) self.window.rootViewController).checkIns = loadedCheckIns;
+    NSLog(@"BEING CALLED");
 }
 
 @end

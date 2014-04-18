@@ -99,7 +99,6 @@
     // locationManager should send updates to this controller class
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-
 }
 
 - (void)viewWillAppear:(BOOL)animated

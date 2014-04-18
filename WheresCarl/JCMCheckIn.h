@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MapKit/MapKit.h"
 
-@interface JCMCheckIn : NSObject
+@interface JCMCheckIn : NSObject <NSCoding>
 
 @property NSString *name;
 @property NSString *message;
