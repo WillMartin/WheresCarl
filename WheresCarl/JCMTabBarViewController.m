@@ -31,8 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.checkIns = [[NSMutableArray alloc] init];
-    [self loadSavedCheckIns];
+    if (self.checkIns == nil) {
+        self.checkIns = [[NSMutableArray alloc] init];
+    }
     // Do any additional setup after loading the view.
 }
 

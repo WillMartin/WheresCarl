@@ -13,7 +13,7 @@
 
 @property NSString *name;
 @property NSString *message;
-@property NSDate *time;
+@property NSString *time;
 @property CLLocationCoordinate2D location;
 
 -(NSString *)description;

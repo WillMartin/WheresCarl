@@ -12,11 +12,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.tabBarController = (JCMTabBarViewController *) self.window.rootViewController;
+    
+    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //NSString *myString = @"Initial Value";
+    //myString = [defaults objectForKey:@"myKey"];
+    //NSLog(myString);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *myString = @"Initial Value";
-    myString = [defaults objectForKey:@"myKey"];
-    NSLog(myString);
+    self.tabBarController.checkIns = [defaults objectForKey:@"CHECKINS"];
+    
     return YES;
 }
 							
@@ -45,9 +50,15 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //[defaults setObject:@"My saved string3!" forKey:@"myKey"];
+    //[defaults synchronize];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:@"My saved string2!" forKey:@"myKey"];
+    [defaults setObject:self.tabBarController.checkIns forKey:@"CHECKINS"];
     [defaults synchronize];
+    
     NSLog(@"Data saved!");
     
 }

@@ -78,7 +78,7 @@
     self.currentCheckIn = [[JCMCheckIn alloc] init];
     self.currentCheckIn.name = self.nameField.text;
     self.currentCheckIn.message = self.messageField.text;
-    self.currentCheckIn.time = [NSDate date];
+    self.currentCheckIn.time = [[NSDate date] description];
     self.currentCheckIn.location = self.currentLocation.coordinate;
 }
 
