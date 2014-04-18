@@ -12,7 +12,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *myString = @"Initial Value";
+    myString = [defaults objectForKey:@"myKey"];
+    NSLog(myString);
     return YES;
 }
 							
@@ -41,6 +45,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"My saved string2!" forKey:@"myKey"];
+    [defaults synchronize];
+    NSLog(@"Data saved!");
+    
 }
 
 @end
