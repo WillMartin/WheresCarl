@@ -2,7 +2,7 @@
 //  constants.h
 //  WheresCarl
 //
-//  Created by Nick Jones on 4/15/14.
+//  Created by Noah Carnahan, Nick Jones, and Will Martin on 4/15/14.
 //
 //
 
