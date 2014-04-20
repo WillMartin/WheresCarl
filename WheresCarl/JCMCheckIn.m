@@ -24,12 +24,17 @@
     
     self.name = [decoder decodeObjectForKey:@"name"];
     self.message = [decoder decodeObjectForKey:@"message"];
+    float lat = [decoder decodeFloatForKey:@"latitude"];
+    float lon = [decoder decodeFloatForKey:@"longitude"];
+    self.location = (CLLocationCoordinate2D) { .latitude = lat, .longitude=lon};
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeObject:self.name forKey:@"name"];
     [encoder encodeObject:self.message forKey:@"message"];
+    [encoder encodeFloat:self.location.latitude forKey:@"latitude"];
+    [encoder encodeFloat:self.location.longitude forKey:@"longitude"];
 }
 
 @end
