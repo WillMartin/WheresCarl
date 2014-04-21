@@ -2,7 +2,7 @@
 //  JCMTabBarViewController.m
 //  WheresCarl
 //
-//  Created by Noah Carnahan on 4/13/14.
+//  Created by Noah Carnahan, Nick Jones, and Will Martin on 4/13/14.
 //
 //
 
@@ -25,13 +25,22 @@
 
 - (void)loadSavedCheckIns
 {
-    // TODO connect this to DB to load user's past checkins
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.checkIns = [[NSMutableArray alloc] init];
+    if (self.checkIns == nil)
+    {
+        self.checkIns = [[NSMutableArray alloc] init];
+    }
+    else
+    {
+        
+    }
+    
     [self loadSavedCheckIns];
     // Do any additional setup after loading the view.
 }
@@ -41,6 +50,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

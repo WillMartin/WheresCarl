@@ -2,7 +2,7 @@
 //  JCMCheckInViewController.m
 //  WheresCarl
 //
-//  Created by Noah Carnahan on 4/13/14.
+//  Created by Noah Carnahan, Nick Jones, and Will Martin on 4/13/14.
 //
 //
 
@@ -99,7 +99,6 @@
     // locationManager should send updates to this controller class
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
